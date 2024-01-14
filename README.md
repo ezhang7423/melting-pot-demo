@@ -8,6 +8,14 @@ make install
 
 ## Usage
 
+to start:
+
+```
+python meltpot_demo/harvest/play_harvest.py --observation WORLD.RGB
+```
+
+to run experiments:
+
 ```
 meltpot_demo --example-config '{"block_size": 10}'
 ```
