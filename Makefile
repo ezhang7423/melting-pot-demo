@@ -14,9 +14,9 @@ install:
 
 	! type -P poetry &> /dev/null && pipx install poetry==1.7.1
 
-	# install research_project conda environment
-	$(CONDA) create -n research_project python=3.10 -y
-	$(CONDA_ACTIVATE) research_project
+	# install meltpot_demo conda environment
+	$(CONDA) create -n meltpot_demo python=3.10 -y
+	$(CONDA_ACTIVATE) meltpot_demo
 
 	type python
 	

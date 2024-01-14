@@ -1,5 +1,4 @@
-# research_project_2
-
+# meltpot_demo
 
 ## Installation
 
@@ -10,9 +9,9 @@ make install
 ## Usage
 
 ```
-research_project --example-config '{"block_size": 10}'  
+meltpot_demo --example-config '{"block_size": 10}'
 ```
 
 ```
-research_project --config $PWD/runs/<YYYY-MM-DD>---<HH-MM-SS>/config.json
+meltpot_demo --config $PWD/runs/<YYYY-MM-DD>---<HH-MM-SS>/config.json
 ```
