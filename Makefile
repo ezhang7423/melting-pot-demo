@@ -15,13 +15,18 @@ install:
 	! type -P poetry &> /dev/null && pipx install poetry==1.7.1
 
 	# install meltpot_demo conda environment
-	$(CONDA) create -n meltpot_demo python=3.10 -y
+	$(CONDA) create -n meltpot_demo python=3.11 -y
 	$(CONDA_ACTIVATE) meltpot_demo
-
+	conda install -c conda-forge libstdcxx-ng
+	
 	type python
 	
+
+	git submodule update --init --recursive
+	pip install -e ./meltingpot
+
 	poetry lock -n && poetry export --without-hashes > requirements.txt
-	poetry install -n
+	poetry install -n	
 	poetry run mypy --install-types --non-interactive ./
 	poetry run pre-commit install
 
